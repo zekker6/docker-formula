@@ -32,7 +32,6 @@ docker-package:
         {%- endif %}
         {%- if grains['os']|lower not in ('suse',) %}
     - allow_updates: {{ docker.pkg.allow_updates }}
-    - hold: {{ docker.pkg.hold }}
         {%- endif %}
         {%- if grains.os_family in ('Suse',) %}   ##workaround https://github.com/saltstack-formulas/docker-formula/issues/198
   cmd.run:
